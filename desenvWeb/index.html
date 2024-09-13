@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+
+        body{
+            background-color: greenyellow;
+        }
+
+        html body h1{
+            font-size: 40px;
+        }
+
+        h1{
+            font-size: 100px
+        }
+
+        
+        img {
+                max-width: 100%;
+        }
+        
+        @media screen and (max-width:767px){
+            
+            body {
+                background-color: red;
+                color: #fff;
+            }
+
+            h1 {
+                font-size: 40px
+            }
+
+            .imgPequena {
+                display: block;
+            }
+            .imgGrande {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:1023px){
+            
+            body {
+                background-color: green;
+                color: #fff;
+            }
+
+            h1 {
+                font-size: 40px
+            }
+
+        }
+
+        @media screen and (min-width:1024px){
+            
+            body {
+                background-color: white;
+                color: #fff;
+            }
+
+            h1 {
+                font-size: 40px;
+                color: black;
+
+            }
+
+            p {
+                color: black;
+            }
+
+            
+            .imgGrande {
+                display: block;
+            }
+            .imgPequena {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Media Queries</h1>
+
+    <div class="imgGrande">
+        <img src="https://placehold.co/1000x400" alt="">
+    </div>
+
+    <div class="imgPequena">
+        <img src="https://placehold.co/500x400" alt="">
+    </div>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus non numquam enim expedita culpa, consequuntur possimus, laborum cumque maiores fugit doloribus ab quod nobis dolor saepe similique cum a aliquam!</p>
+    
+</body>
+</html>
