@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p></p>
+
+    <img src="./image.png" alt="Imagem do bebê sigma Antônho">
+
+    <script>
+        const img = document.querySelector('img')
+        const frase = document.querySelector('p')
+
+        img.addEventListener('click', () => {
+            frase.innerText = "Qual foi malandro, eu sinto cosquinha🤣" 
+        })
+
+        img.addEventListener('mouseenter', () => {
+            frase.innerText = "Que que você tá querendo?🤨"
+        })
+
+        img.addEventListener('mouseleave', () => {
+            frase.innerText = "Ufa, ele saiu de perto😮‍💨"
+        })
+        img.addEventListener('mousemove', () => {
+            frase.innerText = "Tá mexendo ai pq?🤨"
+        })
+    </script>
+</body>
+</html>

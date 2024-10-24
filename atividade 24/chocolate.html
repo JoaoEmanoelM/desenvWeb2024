@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorvete</title>
+
+</head>
+<body>
+    
+    <p>Digite um sabor de sorvete:</p>
+    <input type="text">
+    <p></p> 
+
+    <input type="button" value="Tema Escuro" id="butão">
+
+    <script>
+        let numeroCliques = 0;
+        const textos = document.querySelectorAll('p');
+        const input = document.querySelector('input');
+        const botao = document.getElementById('butão');
+        let temaAtual = "claro";
+
+        input.addEventListener('keyup', () => {
+            let textoDigitado = input.value;
+
+            if (textoDigitado.toLowerCase() === "chocolate") {
+                textos[1].innerText = "Eu amo sorvete de chocolate!!!";
+            } else if (textoDigitado.toLowerCase() === "flocos") {
+                textos[1].innerText = "Ahh, mas chocolate é o meu favorito...";
+            } else {
+                textos[1].innerText = "Ahh, eu esperava um sabor de sorvete...";
+            }
+        });
+
+        botao.addEventListener('click', () => {
+            if (temaAtual === "claro") {
+                botao.value = "Tema Claro";
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                temaAtual = "escuro";
+            } else {
+                botao.value = "Tema Escuro";
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                temaAtual = "claro";
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

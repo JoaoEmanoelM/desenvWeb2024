@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="senha">Senha:</label>
+        <input type="hidden" name="senha" id="senha">
+
+        <label for="confirmaSenha">Confirme a senha</label>
+        <input type="hidden" name="confirmaSenha" id="confirmaSenha">
+        
+        <label for="mostrarSenha">Mostrar senha: </label>
+        <input type="checkbox" name="mostrarSenha" id="mostrarSenha">
+    </form>
+
+    <script>
+        const nome = document.getElementById('nome')
+        const email = document.getElementById('email')
+        const senha = document.getElementById('senha')
+        const confirmaSenha = document.getElementById('confirmaSenha')
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+    
+
+
+
+        if(nome.length >= 3){
+            emailRegex.test("email")
+        }
+
+    </script>
+</body>
+</html>

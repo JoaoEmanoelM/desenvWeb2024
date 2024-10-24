@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p></p>
+    <input type="button" value="Clica ai malandro">
+
+    <script>
+        const nomeAtual = document.querySelector('p');
+        const botao = document.querySelector('input')
+
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"]; 
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"]; const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+        botao.addEventListener('click', () => {
+            
+            let nomeGerado = titles[parseInt(Math.random() * titles.length)] + " " +  names [parseInt(Math.random() * names.length)] + " " + classes[parseInt(Math.random() * classes.length)]
+
+            nomeAtual.innerText = nomeGerado
+
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva</title>
+</head>
+<body>
+    <button>Iniciar contagem regressiva</button>
+    <p></p>
+
+    <script>
+        const button = document.querySelector('button');
+        const texto = document.querySelector('p');
+
+        button.addEventListener('keyup', () => {
+            let countdown = 10; 
+            texto.innerText = countdown; 
+
+            const interval = setInterval(() => {
+                countdown--; 
+                texto.innerText = countdown;
+
+                if (countdown <= 0) {
+                    clearInterval(interval); 
+                    texto.innerText = "Tempo esgotado!";
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
